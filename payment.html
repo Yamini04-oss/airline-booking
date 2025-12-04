@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - SkyTravel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+        <div class="logo">✈</div>
+        <div>
+          <div class="header-title">SkyTravel</div>
+          <div class="header-subtitle">Review & pay</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container payment-container">
+    <section class="booking-summary card">
+      <div class="summary-section">
+        <div class="summary-section-title">Booking Summary</div>
+        <div class="summary-row"><div class="summary-row-label">Flight</div><div class="summary-row-value" id="payFlight">-</div></div>
+        <div class="summary-row"><div class="summary-row-label">Seats</div><div class="summary-row-value" id="paySeats">-</div></div>
+        <div class="summary-row"><div class="summary-row-label">Passengers</div><div class="summary-row-value" id="payPassengers">-</div></div>
+      </div>
+
+      <div class="summary-section">
+        <div class="summary-section-title">Passenger Info</div>
+        <div id="passengerInfo">
+          <!-- Filled dynamically -->
+        </div>
+      </div>
+
+      <div class="summary-section">
+        <div class="summary-section-title">Price Details</div>
+        <div class="price-breakdown">
+          <div class="price-item"><div>Fare (per seat)</div><div id="payFare">₹ 2,499</div></div>
+          <div class="price-item"><div>Taxes & Fees</div><div id="payFees">₹ 499</div></div>
+          <div class="price-total"><div>Total</div><div id="payTotal">₹ 2,998</div></div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="payment-box card">
+      <div class="payment-title">Payment</div>
+      <div style="font-size:13px; color:var(--text-light);">This demo does not process actual payments.</div>
+
+      <div style="margin-top:15px;">
+        <label for="cardName">Name on card</label>
+        <input id="cardName" type="text" placeholder="Full name as on card">
+      </div>
+
+      <div style="margin-top:12px;">
+        <label for="cardNumber">Card number</label>
+        <input id="cardNumber" type="text" placeholder="1234 5678 9012 3456">
+      </div>
+
+      <div style="display:flex; gap:8px; margin-top:12px;">
+        <div style="flex:1;"><label for="exp">Expiry</label><input id="exp" type="text" placeholder="MM/YY"></div>
+        <div style="flex:1;"><label for="cvv">CVV</label><input id="cvv" type="text" placeholder="123"></div>
+      </div>
+
+      <button id="confirmPayment" class="btn btn-primary confirm-btn">Confirm Payment</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

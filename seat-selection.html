@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seat Selection - SkyTravel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+        <div class="logo">✈</div>
+        <div>
+          <div class="header-title">SkyTravel</div>
+          <div class="header-subtitle">Choose your seats</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="seats-container">
+      <div class="seat-selection card">
+        <h3 class="card-title">Seat Map</h3>
+        <p class="card-subtitle">Select seats for your passengers</p>
+
+        <div style="margin-top: 20px;">
+          <div id="seatMap" class="seat-map" aria-label="Seat map"></div>
+        </div>
+
+        <div class="seat-legend" style="margin-top:12px; gap:14px;">
+          <div class="legend-item"><div class="legend-box"></div> Available</div>
+          <div class="legend-item"><div class="legend-box selected-legend"></div> Selected</div>
+          <div class="legend-item"><div class="legend-box blocked-legend"></div> Booked</div>
+          <div class="legend-item" style="margin-left:8px;"><div class="legend-box" style="background:linear-gradient(90deg,var(--secondary-blue),var(--accent-purple));border:none;width:28px; height:18px; border-radius:4px;"></div> Premium (window)</div>
+        </div>
+
+      </div>
+
+      <aside class="seat-summary">
+        <h3 class="summary-title">Selection Summary</h3>
+        <div class="summary-item">
+          <div class="summary-item-label">Passengers</div>
+          <div class="summary-item-value" id="summaryPassengers">1</div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-label">Selected Seats</div>
+          <div class="summary-item-value" id="summarySeats">-</div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-label">Price / seat</div>
+          <div class="summary-item-value" id="summaryPricePer">₹ 2,499</div>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total">
+          <div>Total</div>
+          <div id="summaryTotal">₹ 2,499</div>
+        </div>
+
+        <button id="autoSelectBtn" class="btn btn-secondary mt-20">Auto-select Best Seats</button>
+        <button id="continueToPayment" class="btn btn-primary continue-btn">Continue to Payment</button>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
